@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102b50">
+<meta name="description" content="Amar & Company — Chartered Accountants. Professional accounting, audit, taxation, financial advisory and business consulting services backed by over 20 years of experience.">
+<title>Amar & Company | Chartered Accountants</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:#102b50;
+  --blue:#245b9c;
+  --bright:#347ac1;
+  --pale:#edf4fb;
+  --light:#f5f8fc;
+  --white:#fff;
+  --ink:#172b42;
+  --muted:#68798b;
+  --line:#e1e8f0;
+  --radius:12px;
+  --shadow:0 15px 45px rgba(16,43,80,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:white;line-height:1.7}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,90%);margin:auto}
+.section{padding:95px 0}
+.section-light{background:var(--light)}
+.section-blue{background:var(--navy);color:white}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2.2px;color:var(--bright);font-weight:800;margin-bottom:15px}
+.heading{font-family:Manrope,sans-serif;font-size:clamp(30px,4vw,43px);line-height:1.2;letter-spacing:-1.4px;font-weight:800;color:var(--navy)}
+.section-intro{max-width:650px;color:var(--muted);margin-top:16px}
+.section-header{margin-bottom:45px}
+.center{text-align:center}
+.center .section-intro{margin:16px auto 0}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 23px;border-radius:6px;font-weight:700;font-size:14px;transition:.25s;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--blue);color:white}
+.btn-primary:hover{background:var(--navy);transform:translateY(-2px)}
+.btn-white{background:white;color:var(--navy)}
+.btn-white:hover{background:#eaf2fb}
+.btn-outline{border-color:#c7d5e5;color:var(--navy)}
+.btn-outline:hover{background:var(--pale)}
+.btn-small{padding:10px 16px}
+
+/* Navigation */
+.topbar{background:var(--navy);color:#dbe8f6;font-size:12px;padding:9px 0}
+.topbar-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.topbar a:hover{color:white}
+header{height:83px;background:white;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--line)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-symbol{width:43px;height:43px;border-radius:7px;background:var(--navy);display:grid;place-items:center;color:white;font-family:Manrope;font-weight:800;font-size:19px}
+.logo-name{font-family:Manrope;font-size:18px;font-weight:800;color:var(--navy);line-height:1.2}
+.logo-name small{display:block;font-family:'DM Sans';font-size:9px;letter-spacing:2px;color:var(--muted);font-weight:600;margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links a{font-size:13px;font-weight:600;color:#52657b;transition:.2s}
+.nav-links a:hover{color:var(--bright)}
+.menu-toggle{display:none;background:none;border:0;font-size:27px;color:var(--navy);cursor:pointer}
+
+/* Hero */
+.hero{background:linear-gradient(110deg,#f4f8fd 0%,#edf4fb 65%,#e5eef9 100%);position:relative;overflow:hidden;padding:95px 0}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(36,91,156,.10);border-radius:50%;right:-150px;top:-160px;box-shadow:0 0 0 55px rgba(36,91,156,.025),0 0 0 110px rgba(36,91,156,.02)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.hero h1{font-family:Manrope;font-size:clamp(40px,5.5vw,65px);line-height:1.12;letter-spacing:-2.7px;color:var(--navy);margin-bottom:24px}
+.hero h1 span{color:var(--blue)}
+.hero-description{font-size:16px;color:#607187;max-width:550px;margin-bottom:32px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.hero-proof{display:flex;gap:22px;flex-wrap:wrap;margin-top:37px;padding-top:25px;border-top:1px solid #d8e3ef}
+.proof-item strong{display:block;color:var(--navy);font-size:21px;font-family:Manrope}
+.proof-item span{font-size:11px;color:var(--muted)}
+.hero-visual{position:relative}
+.hero-card{background:white;padding:13px;border-radius:12px;box-shadow:var(--shadow);border:1px solid #e5ebf3;max-width:410px;margin-left:auto}
+.hero-photo{height:410px;width:100%;object-fit:cover;object-position:center 25%;border-radius:7px;background:#e8eef5}
+.hero-caption{padding:17px 10px 9px}
+.hero-caption strong{display:block;font-family:Manrope;font-size:18px;color:var(--navy)}
+.hero-caption span{font-size:12px;color:var(--muted)}
+.experience-float{position:absolute;left:-40px;bottom:60px;background:var(--navy);color:white;padding:21px 25px;border-radius:8px;box-shadow:var(--shadow)}
+.experience-float strong{font-family:Manrope;font-size:35px;display:block;line-height:1.2}
+.experience-float span{font-size:11px;color:#d2e0ef}
+
+/* Trust strip */
+.trust{background:white;border-bottom:1px solid var(--line);padding:25px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust-item{text-align:center;border-right:1px solid var(--line)}
+.trust-item:last-child{border:0}
+.trust-item strong{display:block;color:var(--navy);font-size:14px}
+.trust-item span{font-size:11px;color:var(--muted)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}
+.about-visual{position:relative}
+.about-visual img{width:100%;height:440px;object-fit:cover;object-position:center 25%;border-radius:8px;background:#e9eff6}
+.about-visual:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid #b6cbe1;border-radius:8px;z-index:-1}
+.about-copy p{color:var(--muted);margin:19px 0}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:27px 0}
+.about-point{display:flex;gap:10px;font-size:13px;font-weight:600;color:var(--navy)}
+.check{width:22px;height:22px;background:var(--pale);color:var(--blue);display:grid;place-items:center;border-radius:50%;flex-shrink:0}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:white;border:1px solid var(--line);border-radius:8px;padding:29px;transition:.25s}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#c1d4e9}
+.service-icon{width:47px;height:47px;display:grid;place-items:center;background:var(--pale);color:var(--blue);border-radius:8px;font-size:21px;margin-bottom:20px}
+.service-card h3{font-family:Manrope;font-size:18px;color:var(--navy);margin-bottom:11px}
+.service-card p{font-size:13px;color:var(--muted);min-height:65px}
+.service-card a{display:inline-block;margin-top:17px;font-size:12px;font-weight:700;color:var(--blue)}
+
+/* Approach */
+.approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:45px}
+.approach-item{border-top:2px solid #7298c1;padding-top:23px}
+.approach-item .number{font-size:13px;color:#9dbbd9;font-weight:800;letter-spacing:2px}
+.approach-item h3{font-family:Manrope;font-size:20px;margin:13px 0;color:white}
+.approach-item p{font-size:13px;color:#c4d4e6}
+
+/* Industries */
+.industry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.industry{padding:25px 20px;background:white;border:1px solid var(--line);border-radius:7px}
+.industry span{font-size:23px;color:var(--blue)}
+.industry h3{font-size:15px;color:var(--navy);margin:12px 0 5px}
+.industry p{font-size:12px;color:var(--muted)}
+
+/* Insights */
+.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.insight{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:white}
+.insight-top{height:135px;background:linear-gradient(130deg,#163d69,#3678b7);display:flex;align-items:center;justify-content:center;color:white;font-family:Manrope;font-size:38px;font-weight:800}
+.insight-body{padding:23px}
+.insight-body small{color:var(--blue);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.insight-body h3{font-family:Manrope;color:var(--navy);font-size:17px;line-height:1.4;margin:10px 0}
+.insight-body p{font-size:12px;color:var(--muted)}
+
+/* Careers */
+.career-box{background:var(--pale);padding:45px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:35px}
+.career-box h2{font-family:Manrope;color:var(--navy);font-size:30px;line-height:1.3}
+.career-box p{color:var(--muted);font-size:14px;max-width:600px;margin-top:13px}
+
+/* FAQ */
+.faq-list{max-width:800px;margin:auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-question{width:100%;padding:21px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;background:none;border:0;text-align:left;color:var(--navy);font-weight:700;cursor:pointer}
+.faq-answer{display:none;color:var(--muted);font-size:14px;padding:0 30px 20px 0}
+.faq-item.open .faq-answer{display:block}
+.faq-item.open .faq-question span{transform:rotate(45deg)}
+.faq-question span{font-size:22px;color:var(--blue);transition:.2s}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px;align-items:start}
+.contact-panel{background:var(--navy);padding:38px;border-radius:9px;color:white}
+.contact-panel h2{font-family:Manrope;font-size:28px;line-height:1.3}
+.contact-panel>p{color:#c5d5e6;font-size:13px;margin:15px 0 28px}
+.contact-detail{padding:17px 0;border-top:1px solid rgba(255,255,255,.16)}
+.contact-detail small{display:block;color:#a9c3df;font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.contact-detail strong,.contact-detail a{font-size:14px;color:white}
+.contact-form{padding:35px;border:1px solid var(--line);border-radius:9px;box-shadow:0 10px 35px rgba(16,43,80,.04)}
+.contact-form h3{font-family:Manrope;font-size:23px;color:var(--navy);margin-bottom:7px}
+.contact-form>p{font-size:12px;color:var(--muted);margin-bottom:24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.form-field{margin-bottom:17px}
+.form-field.full{grid-column:1/-1}
+.form-field label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:7px}
+.form-field input,.form-field select,.form-field textarea{width:100%;padding:13px;border:1px solid #dce5ef;border-radius:5px;background:#fbfcfe;outline:none;color:var(--ink);font-size:13px}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #245b9c12}
+.form-field textarea{height:115px;resize:vertical}
+.form-status{font-size:12px;color:var(--blue);margin-top:12px}
+.map-frame{width:100%;height:300px;border:0;border-radius:8px;background:var(--pale);margin-top:28px}
+
+/* Footer */
+footer{background:#0c213d;color:#d4e0ed;padding:65px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:45px}
+.footer-brand .logo-name{color:white}
+.footer-brand .logo-name small{color:#aebed0}
+.footer-brand p{font-size:12px;color:#aebed0;max-width:270px;margin-top:20px}
+.footer-title{font-size:12px;color:white;font-weight:800;margin-bottom:17px}
+.footer-links{display:grid;gap:11px}
+.footer-links a{font-size:12px;color:#b4c4d7}
+.footer-links a:hover{color:white}
+.footer-bottom{border-top:1px solid #ffffff22;padding-top:20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:11px;color:#9eb0c4}
+.whatsapp-float{position:fixed;right:23px;bottom:22px;z-index:120;background:#187a55;color:white;padding:14px 19px;border-radius:40px;font-size:13px;font-weight:800;box-shadow:0 8px 25px #102b5030;transition:.2s}
+.whatsapp-float:hover{background:#116342;transform:translateY(-3px)}
+
+@media(max-width:950px){
+ .nav-links{gap:14px}.nav-links a{font-size:12px}
+ .hero-grid{gap:35px}.about-grid{gap:45px}
+ .services-grid{grid-template-columns:repeat(2,1fr)}
+ .industry-grid{grid-template-columns:repeat(2,1fr)}
+ .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+ .topbar-inner{justify-content:center;text-align:center}
+ header{height:72px}
+ .menu-toggle{display:block}
+ .nav-links{display:none;position:absolute;left:0;right:0;top:71px;background:white;padding:20px 5%;border-bottom:1px solid var(--line);box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}
+ .nav-links.active{display:flex}
+ .nav-links a{padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+ .nav-links .btn{margin-top:15px}
+ .hero{padding:65px 0}
+ .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .hero h1{font-size:44px}
+ .hero-visual{max-width:400px;margin:10px auto 0}
+ .hero-photo{height:360px}
+ .experience-float{left:-10px;bottom:50px}
+ .trust-grid{grid-template-columns:repeat(2,1fr);row-gap:23px}
+ .trust-item:nth-child(2){border:0}
+ .section{padding:70px 0}
+ .about-visual{max-width:430px;margin:0 auto 20px}
+ .about-visual img{height:360px}
+ .services-grid,.insight-grid{grid-template-columns:1fr}
+ .approach-grid{grid-template-columns:1fr;gap:25px}
+ .career-box{padding:28px;align-items:flex-start;flex-direction:column}
+ .contact-panel,.contact-form{padding:26px}
+ .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
+@media(max-width:420px){
+ .hero h1{font-size:38px}
+ .form-grid{grid-template-columns:1fr}
+ .form-field.full{grid-column:auto}
+ .about-points{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr}
+ .whatsapp-float{right:12px;bottom:12px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+ <div class="container topbar-inner">
+  <span>Registered Auditor | Professional Financial Advisory</span>
+  <span>Consultations: <a href="https://wa.me/9779854020932">+977 9854020932</a></span>
+ </div>
+</div>
+
+<header>
+ <nav class="container nav">
+  <a href="#home" class="logo">
+   <div class="logo-symbol">A</div>
+   <div class="logo-name">AMAR & COMPANY<small>REGISTERED AUDITOR</small></div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+  <div class="nav-links" id="navLinks">
+   <a href="#home">Home</a>
+   <a href="#about">About</a>
+   <a href="#services">Services</a>
+   <a href="#industries">Industries</a>
+   <a href="#insights">Insights</a>
+   <a href="#careers">Careers</a>
+   <a href="#contact">Contact</a>
+   <a class="btn btn-primary btn-small" href="https://wa.me/9779854020932?text=Hello%20Amar%20%26%20Company%2C%20I%20would%20like%20a%20consultation.">Consultation ↗</a>
+  </div>
+ </nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow">Trusted financial expertise</div>
+   <h1>Clarity in finance.<br><span>Confidence in business.</span></h1>
+   <p class="hero-description">
+    Professional accounting, audit, taxation and advisory services designed to help businesses make informed decisions, maintain compliance and build long-term financial strength.
+   </p>
+   <div class="hero-actions">
+    <a class="btn btn-primary" href="#services">Explore our services →</a>
+    <a class="btn btn-outline" href="https://wa.me/9779854020932?text=Hello%20Amar%20%26%20Company%2C%20I%20would%20like%20to%20schedule%20a%20consultation.">Speak to an advisor ↗</a>
+   </div>
+   <div class="hero-proof">
+    <div class="proof-item"><strong>20+</strong><span>Years of experience</span></div>
+    <div class="proof-item"><strong>Professional</strong><span>Service approach</span></div>
+    <div class="proof-item"><strong>Client-first</strong><span>Advisory philosophy</span></div>
+   </div>
+  </div>
+
+  <div class="hero-visual">
+   <div class="hero-card">
+    <img class="hero-photo" src="assets/founder.png" alt="Founder of Amar and Company" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+    <div style="display:none;height:410px;place-items:center;background:#edf4fb;color:#245b9c;font-family:Manrope;font-weight:800;text-align:center;padding:25px">Add founder photograph at<br>assets/founder.jpg</div>
+    <div class="hero-caption">
+     <strong>Leadership built on experience</strong>
+     <span>Founder | Amar & Company</span>
+    </div>
+   </div>
+   <div class="experience-float"><strong>20+</strong><span>Years of professional experience</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+ <div class="container trust-grid">
+  <div class="trust-item"><strong>Accounting & Reporting</strong><span>Financial clarity</span></div>
+  <div class="trust-item"><strong>Audit & Assurance</strong><span>Professional diligence</span></div>
+  <div class="trust-item"><strong>Taxation</strong><span>Compliance support</span></div>
+  <div class="trust-item"><strong>Business Advisory</strong><span>Informed decisions</span></div>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+ <div class="container about-grid">
+  <div class="about-visual">
+   <img src="assets/founder img2.png" alt="Founder of Amar and Company" onerror="this.style.display='none'">
+  </div>
+  <div class="about-copy">
+   <div class="eyebrow">About our firm</div>
+   <h2 class="heading">Experience that builds trust. Expertise that moves you forward.</h2>
+   <p>Amar & Company is committed to delivering professional accounting, auditing, taxation and financial advisory services with integrity, responsibility and attention to detail.</p>
+   <p>With over 20 years of professional experience, our approach is centred on understanding each client's requirements and providing practical financial guidance that supports responsible business decisions.</p>
+   <div class="about-points">
+    <div class="about-point"><span class="check">✓</span> Professional integrity</div>
+    <div class="about-point"><span class="check">✓</span> Client-focused service</div>
+    <div class="about-point"><span class="check">✓</span> Practical advice</div>
+    <div class="about-point"><span class="check">✓</span> Long-term perspective</div>
+   </div>
+   <a href="#contact" class="btn btn-primary">Get in touch →</a>
+  </div>
+ </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-light" id="services">
+ <div class="container">
+  <div class="section-header">
+   <div class="eyebrow">What we do</div>
+   <h2 class="heading">Professional services for<br>every stage of business.</h2>
+   <p class="section-intro">A comprehensive range of financial and professional services to support compliance, accountability and business growth.</p>
+  </div>
+
+  <div class="services-grid">
+   <article class="service-card">
+    <div class="service-icon">▤</div>
+    <h3>Audit & Assurance</h3>
+    <p>Professional audit and assurance services focused on financial reporting, internal controls and accountability.</p>
+    <a href="#contact">Discuss this service →</a>
+   </article>
+   <article class="service-card">
+    <div class="service-icon">%</div>
+    <h3>Taxation Services</h3>
+    <p>Tax compliance, tax planning support and assistance with applicable tax-related requirements.</p>
+    <a href="#contact">Discuss this service →</a>
+   </article>
+   <article class="service-card">
+    <div class="service-icon">▦</div>
+    <h3>Accounting & Bookkeeping</h3>
+    <p>Accounting records, bookkeeping and financial reporting support for informed management decisions.</p>
+    <a href="#contact">Discuss this service →</a>
+   </article>
+   <article class="service-card">
+    <div class="service-icon">↗</div>
+    <h3>Financial Advisory</h3>
+    <p>Financial insights and practical advisory support to help organisations understand their financial position.</p>
+    <a href="#contact">Discuss this service →</a>
+   </article>
+   <article class="service-card">
+    <div class="service-icon">⌘</div>
+    <h3>Business Consulting</h3>
+    <p>Business-oriented guidance, financial processes and organisational support tailored to client requirements.</p>
+    <a href="#contact">Discuss this service →</a>
+   </article>
+   <article class="service-card">
+    <div class="service-icon">▣</div>
+    <h3>Compliance & Reporting</h3>
+    <p>Assistance with relevant financial documentation, reporting processes and regulatory compliance requirements.</p>
+    <a href="#contact">Discuss this service →</a>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- APPROACH -->
+<section class="section section-blue">
+ <div class="container">
+  <div class="eyebrow" style="color:#a9c8e8">Our commitment</div>
+  <h2 class="heading" style="color:white">A professional relationship<br>built around your needs.</h2>
+  <p class="section-intro" style="color:#c4d4e6">We believe effective professional services start with listening, understanding and clear communication.</p>
+  <div class="approach-grid">
+   <div class="approach-item">
+    <div class="number">01 / UNDERSTAND</div>
+    <h3>Understand your business</h3>
+    <p>We begin by understanding your organisation, its requirements and the financial challenges you need to address.</p>
+   </div>
+   <div class="approach-item">
+    <div class="number">02 / ADVISE</div>
+    <h3>Provide practical guidance</h3>
+    <p>We focus on clear communication and relevant professional guidance for your specific needs.</p>
+   </div>
+   <div class="approach-item">
+    <div class="number">03 / SUPPORT</div>
+    <h3>Build lasting confidence</h3>
+    <p>We aim to establish professional relationships based on responsibility, transparency and trust.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section" id="industries">
+ <div class="container">
+  <div class="section-header center">
+   <div class="eyebrow">Who we support</div>
+   <h2 class="heading">Supporting diverse business needs.</h2>
+   <p class="section-intro">Professional financial support can help organisations across different sectors manage their financial responsibilities.</p>
+  </div>
+  <div class="industry-grid">
+   <div class="industry"><span>▥</span><h3>Corporate Businesses</h3><p>Accounting and financial reporting requirements.</p></div>
+   <div class="industry"><span>⌂</span><h3>Small & Medium Enterprises</h3><p>Business accounting and compliance support.</p></div>
+   <div class="industry"><span>♧</span><h3>Non-profit Organisations</h3><p>Financial accountability and reporting.</p></div>
+   <div class="industry"><span>▤</span><h3>Professional Services</h3><p>Financial and tax-related assistance.</p></div>
+   <div class="industry"><span>▦</span><h3>Trading & Commerce</h3><p>Accounting and business support.</p></div>
+   <div class="industry"><span>⌘</span><h3>Service Providers</h3><p>Financial processes and reporting.</p></div>
+   <div class="industry"><span>◈</span><h3>Growing Enterprises</h3><p>Financial planning and advisory needs.</p></div>
+   <div class="industry"><span>◎</span><h3>Other Organisations</h3><p>Tailored professional service enquiries.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="section section-light" id="insights">
+ <div class="container">
+  <div class="section-header">
+   <div class="eyebrow">Knowledge & resources</div>
+   <h2 class="heading">Financial knowledge<br>for better decisions.</h2>
+   <p class="section-intro">Explore important areas of financial management and professional business practice.</p>
+  </div>
+  <div class="insight-grid">
+   <article class="insight">
+    <div class="insight-top">01</div>
+    <div class="insight-body">
+     <small>Financial management</small>
+     <h3>Why accurate financial records matter</h3>
+     <p>Understand how organised accounting records can support reporting, accountability and business decisions.</p>
+    </div>
+   </article>
+   <article class="insight">
+    <div class="insight-top">02</div>
+    <div class="insight-body">
+     <small>Tax awareness</small>
+     <h3>Understanding tax compliance responsibilities</h3>
+     <p>Learn why understanding applicable tax obligations and maintaining documentation are important for organisations.</p>
+    </div>
+   </article>
+   <article class="insight">
+    <div class="insight-top">03</div>
+    <div class="insight-body">
+     <small>Audit & assurance</small>
+     <h3>The role of audit in financial accountability</h3>
+     <p>Explore how audit and assurance processes contribute to transparency and confidence in financial reporting.</p>
+    </div>
+   </article>
+  </div>
+  <p style="font-size:11px;color:var(--muted);margin-top:20px">These are general educational topics, not individual tax or legal advice.</p>
+ </div>
+</section>
+
+<!-- CAREERS -->
+<section class="section" id="careers">
+ <div class="container">
+  <div class="career-box">
+   <div>
+    <div class="eyebrow">Careers at Amar & Company</div>
+    <h2>Build your professional journey with us.</h2>
+    <p>Interested in professional opportunities, learning and contributing to an accounting and advisory environment? Contact our team to introduce yourself and enquire about potential opportunities.</p>
+   </div>
+   <a class="btn btn-primary" href="https://wa.me/9779854020932?text=Hello%20Amar%20%26%20Company%2C%20I%20am%20interested%20in%20career%20opportunities.">Enquire about careers ↗</a>
+  </div>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-light" id="faq">
+ <div class="container">
+  <div class="section-header center">
+   <div class="eyebrow">Frequently asked questions</div>
+   <h2 class="heading">How can we help?</h2>
+  </div>
+  <div class="faq-list">
+   <div class="faq-item">
+    <button class="faq-question">What services does Amar & Company provide?<span>+</span></button>
+    <div class="faq-answer">Our service areas include audit and assurance, taxation, accounting and bookkeeping, financial advisory, business consulting and compliance support. Contact us to discuss your specific requirements.</div>
+   </div>
+   <div class="faq-item">
+    <button class="faq-question">How can I arrange a consultation?<span>+</span></button>
+    <div class="faq-answer">You can contact us directly through WhatsApp at +977 9854020932 or submit an enquiry using the contact form on this website.</div>
+   </div>
+   <div class="faq-item">
+    <button class="faq-question">Can I enquire about a particular service?<span>+</span></button>
+    <div class="faq-answer">Yes. Select your area of interest in the contact form and explain your requirements. Your enquiry will be prepared as a WhatsApp message.</div>
+   </div>
+   <div class="faq-item">
+    <button class="faq-question">How can I enquire about career opportunities?<span>+</span></button>
+    <div class="faq-answer">Use the careers section to contact the firm and introduce yourself. Availability of positions should be confirmed directly with the firm.</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+ <div class="container">
+  <div class="section-header">
+   <div class="eyebrow">Contact our team</div>
+   <h2 class="heading">Let's discuss your<br>professional requirements.</h2>
+   <p class="section-intro">Reach out to discuss your accounting, taxation, audit or advisory requirements. We welcome your enquiry.</p>
+  </div>
+
+  <div class="contact-grid">
+   <div>
+    <div class="contact-panel">
+     <h2>Start a conversation.</h2>
+     <p>Connect with Amar & Company to discuss your requirements and arrange a consultation.</p>
+     <div class="contact-detail"><small>WhatsApp / Phone</small><strong><a href="https://wa.me/9779854020932">+977 9854020932 ↗</a></strong></div>
+     <div class="contact-detail"><small>Consultation</small><strong><a href="https://wa.me/9779854020932?text=Hello%20Amar%20%26%20Company%2C%20I%20would%20like%20a%20consultation.">Message us on WhatsApp</a></strong></div>
+     <div class="contact-detail"><small>Office location</small><strong><a href="https://share.google/UkxTl7scLhCImrFsG" target="_blank" rel="noopener">View location on Google Maps ↗</a></strong></div>
+     <div class="contact-detail"><small>Professional experience</small><strong>Over 20 years</strong></div>
+    </div>
+    <iframe class="map-frame" title="Amar and Company office location" src="https://maps.google.com/maps?q=Amar%20and%20Company&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px">For the exact office location, use the firm's supplied <a href="https://share.google/UkxTl7scLhCImrFsG" target="_blank" style="color:var(--blue);font-weight:700">Google Maps link</a>.</p>
+   </div>
+
+   <form class="contact-form" id="contactForm">
+    <h3>Send an enquiry</h3>
+    <p>Complete the details below. Your enquiry will open in WhatsApp for you to review and send.</p>
+    <div class="form-grid">
+     <div class="form-field">
+      <label for="name">Full name *</label>
+      <input id="name" name="name" required placeholder="Your name">
+     </div>
+     <div class="form-field">
+      <label for="phone">Phone number *</label>
+      <input id="phone" name="phone" required type="tel" placeholder="Your contact number">
+     </div>
+     <div class="form-field full">
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com">
+     </div>
+     <div class="form-field full">
+      <label for="service">Service required *</label>
+      <select id="service" name="service" required>
+       <option value="">Select a service</option>
+       <option>Audit & Assurance</option>
+       <option>Taxation Services</option>
+       <option>Accounting & Bookkeeping</option>
+       <option>Financial Advisory</option>
+       <option>Business Consulting</option>
+       <option>Compliance & Reporting</option>
+       <option>Career Enquiry</option>
+       <option>Other Enquiry</option>
+      </select>
+     </div>
+     <div class="form-field full">
+      <label for="message">How can we help? *</label>
+      <textarea id="message" name="message" required placeholder="Briefly describe your requirements..."></textarea>
+     </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Continue to WhatsApp ↗</button>
+    <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    <p style="font-size:10px;margin-top:13px;color:var(--muted)">Your message will be sent only after you review and press Send in WhatsApp. This website does not store submitted information.</p>
+   </form>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand">
+    <a href="#home" class="logo">
+     <div class="logo-symbol" style="background:#fff;color:#102b50">A</div>
+     <div class="logo-name">AMAR & COMPANY<small>CHARTERED ACCOUNTANTS</small></div>
+    </a>
+    <p>Professional accounting, auditing, taxation and advisory services built on experience, integrity and client relationships.</p>
+   </div>
+   <div>
+    <div class="footer-title">Explore</div>
+    <div class="footer-links">
+     <a href="#home">Home</a><a href="#about">About us</a><a href="#services">Our services</a><a href="#industries">Industries</a>
+    </div>
+   </div>
+   <div>
+    <div class="footer-title">Information</div>
+    <div class="footer-links">
+     <a href="#insights">Insights</a><a href="#careers">Careers</a><a href="#faq">FAQs</a><a href="#contact">Contact</a>
+    </div>
+   </div>
+   <div>
+    <div class="footer-title">Get in touch</div>
+    <div class="footer-links">
+     <a href="https://wa.me/9779854020932">+977 9854020932</a>
+     <a href="https://share.google/UkxTl7scLhCImrFsG" target="_blank">Office location ↗</a>
+     <a href="https://wa.me/9779854020932?text=Hello%20Amar%20%26%20Company">WhatsApp consultation ↗</a>
+    </div>
+   </div>
+  </div>
+  <div class="footer-bottom">
+   <span>© <span id="year"></span> Amar & Company. All rights reserved.</span>
+   <span>Professionalism · Integrity · Trust</span>
+  </div>
+ </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/9779854020932?text=Hello%20Amar%20%26%20Company%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="Contact Amar and Company on WhatsApp">WhatsApp ↗</a>
+
+<script>
+const WHATSAPP_NUMBER = "9779854020932";
+
+// Mobile navigation
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  const opened = navLinks.classList.toggle("active");
+  menuToggle.setAttribute("aria-expanded", String(opened));
+  menuToggle.textContent = opened ? "×" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
+
+// FAQ accordion
+document.querySelectorAll(".faq-question").forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.parentElement;
+    item.classList.toggle("open");
+  });
+});
+
+// Contact form -> WhatsApp click-to-chat
+document.getElementById("contactForm").addEventListener("submit", event => {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  if (!form.reportValidity()) return;
+
+  const data = new FormData(form);
+  const message = [
+    "Hello Amar & Company, I would like to make an enquiry.",
+    "",
+    "Name: " + data.get("name"),
+    "Phone: " + data.get("phone"),
+    "Email: " + (data.get("email") || "Not provided"),
+    "Service required: " + data.get("service"),
+    "",
+    "Message:",
+    data.get("message")
+  ].join("\n");
+
+  const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+
+  document.getElementById("formStatus").textContent =
+    "Opening WhatsApp. Please review your enquiry and press Send.";
+
+  window.open(url, "_blank", "noopener,noreferrer");
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
